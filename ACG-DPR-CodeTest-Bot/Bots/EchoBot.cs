@@ -20,6 +20,11 @@ namespace ACG_DPR_CodeTest_Bot.Bots
                 var replyText = "Hello there!";
                 await turnContext.SendActivityAsync(MessageFactory.Text(replyText, replyText), cancellationToken);
             }
+            else if (turnContext.Activity.Text == "how are you")
+            {
+                var replyText = "I'm great!";
+                await turnContext.SendActivityAsync(MessageFactory.Text(replyText, replyText), cancellationToken);
+            }
             else 
             {
                 var replyText = $"Echo: {turnContext.Activity.Text}";
